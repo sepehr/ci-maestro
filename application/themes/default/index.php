@@ -30,12 +30,6 @@
 				<!-- Messages -->
 				<div class="messages-wrapper">
 					<?php echo Template::message() ?>
-
-					<?php if (isset($message)): ?>
-					<div class="auth">
-						<?php echo $message ?>
-					</div>
-					<?php endif; ?>
 				</div>
 
 				<div class="content">
