@@ -20,8 +20,13 @@ abstract class Front_Controller extends Base_Controller {
 	{
 		parent::__construct();
 
+		Events::trigger('before_front_controller');
+
 		// Load template and assets libraries, set theme, etc.
 		$this->load->library(array('assets', 'template'));
+
+		// Set default theme
+		Template::set_theme($this->config->item('default_theme'));
 
 		// Add general CSS assets
 		Assets::add_css('bootstrap.min.css');
@@ -39,6 +44,8 @@ abstract class Front_Controller extends Base_Controller {
 			'head'           => '',
 			'body_classes'   => '',
 		));
+
+		Events::trigger('after_front_controller');
 	}
 
 }

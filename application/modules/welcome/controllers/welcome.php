@@ -1,5 +1,12 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
+/**
+ * Welcome module's controller for demo purposes.
+ *
+ * @package 	CodeIgniter
+ * @category	Controllers
+ * @author		Sepehr Lajevardi <me@sepehr.ws>
+ * @link		https://github.com/sepehr/ci-maestro
+ */
 class Welcome extends Front_Controller {
 
 	/**
@@ -18,6 +25,7 @@ class Welcome extends Front_Controller {
 	 */
 	public function index()
 	{
+		// Use template library to render method corresponding view
 		Template::render();
 	}
 }

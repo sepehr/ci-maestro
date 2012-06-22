@@ -11,7 +11,7 @@
  * @link		https://github.com/sepehr/ci-base-controllers
  * @see			http://highermedia.com/articles/nuts_bolts/codeigniter_base_classes_revisited
  */
-abstract class Admin_Controller extends Base_Controller {
+abstract class Admin_Controller extends Front_Controller {
 
 	/**
 	 * Admin controller constructor.
@@ -19,6 +19,10 @@ abstract class Admin_Controller extends Base_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+
+		Events::trigger('before_admin_controller');
+
+		Events::trigger('after_admin_controller');
 	}
 }
 // End of Admin_Controller class

@@ -11,7 +11,7 @@
  * @author		Sepehr Lajevardi <me@sepehr.ws>
  * @link		https://github.com/sepehr/ci-base-controllers
  */
-abstract class Auth_Controller extends Base_Controller {
+abstract class Auth_Controller extends Front_Controller {
 
 	/**
 	 * Auth controller constructor.
@@ -20,7 +20,17 @@ abstract class Auth_Controller extends Base_Controller {
 	{
 		parent::__construct();
 
+		Events::trigger('before_auth_controller');
+
 		// Make sure that the user is already loggedin
+		if ( ! $this->auth->logged_in())
+		{
+			$this->auth->logout();
+			Template::set_message('You must be logged in to view that page.', 'error');
+			Template::redirect('login');
+		}
+
+		Events::trigger('after_auth_controller');
 	}
 }
 // End of Auth_Controller class
