@@ -27,7 +27,7 @@ abstract class Auth_Controller extends Front_Controller {
 		{
 			$this->auth->logout();
 			Template::set_message('You must be logged in to view that page.', 'error');
-			Template::redirect('login');
+			Template::redirect('auth/login');
 		}
 
 		Events::trigger('after_auth_controller');
