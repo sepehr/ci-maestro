@@ -12,8 +12,12 @@
 		</h1>
 
 		<div class="profile pull-right well" style="position: relative; bottom: 40px; background: #f2f2f2; padding: 12px;">
+		<?php if ($current_user): ?>
 			<?php echo $current_user->picture ?>
 			<?php echo anchor('auth', $current_user->email) ?>
+		<?php else: ?>
+			<?php echo anchor('auth/login', 'Login') ?>
+		<?php endif; ?>
 		</div>
 	</div>
 

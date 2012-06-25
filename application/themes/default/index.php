@@ -47,6 +47,7 @@
 						<i class="icon icon-time icon-white"></i>
 						<strong>{elapsed_time}</strong> seconds
 					</div>
+
 				</div> <!-- /.content -->
 
 			</div> <!-- /.span12 -->
