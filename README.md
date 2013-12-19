@@ -11,10 +11,10 @@ Two more things:
 
 ## Screenshots
 ###Welcome screen
-![CodeIgniter Maestro Welcome](http://localhostr.com/file/FGi0o5iugcVL/ci-maestro-welcome.png)
+![CodeIgniter Maestro Welcome](https://hostr.co/file/970/FGi0o5iugcVL/ci-maestro-welcome.png)
 
 ###Sample users dashboard
-![CodeIgniter Maestro Sample User Dashboard](http://localhostr.com/file/kSKDSuWrwuH6/ci-maestro-users.png)
+![CodeIgniter Maestro Sample User Dashboard](https://hostr.co/file/970/kSKDSuWrwuH6/ci-maestro-users.png)
 
 ## Requirements
 1. PHP 5.2+
